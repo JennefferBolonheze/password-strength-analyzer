@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Password Strength Analyzer | Jenneffer Souza</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <section class="password-card">
+
+            <!-- CABEÇALHO -->
+
+            <div class="project-icon">
+                🔐
+            </div>
+
+            <p class="project-category">
+                Cybersecurity Project
+            </p>
+
+            <h1>
+                Password Strength Analyzer
+            </h1>
+
+            <p class="description">
+                Analise a força da sua senha e receba
+                recomendações para torná-la mais segura.
+            </p>
+
+
+            <!-- CAMPO DA SENHA -->
+
+            <div class="password-container">
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Digite sua senha"
+                    autocomplete="off"
+                >
+
+                <button
+                    id="togglePassword"
+                    type="button"
+                    aria-label="Mostrar ou ocultar senha"
+                >
+                    👁
+                </button>
+
+            </div>
+
+
+            <!-- FORÇA DA SENHA -->
+
+            <div class="strength-section">
+
+                <div class="strength-info">
+
+                    <span>
+                        Força da senha
+                    </span>
+
+                    <strong id="strengthText">
+                        Aguardando...
+                    </strong>
+
+                </div>
+
+
+                <div class="strength-bar">
+
+                    <div
+                        class="strength-fill"
+                        id="strengthFill"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PONTUAÇÃO -->
+
+            <div class="score-card">
+
+                <div>
+                    <span class="score-label">
+                        Security Score
+                    </span>
+
+                    <p>
+                        Pontuação de segurança
+                    </p>
+                </div>
+
+                <strong id="score">
+                    0 / 100
+                </strong>
+
+            </div>
+
+
+            <!-- REQUISITOS -->
+
+            <div class="requirements">
+
+                <h2>
+                    Verificação de segurança
+                </h2>
+
+
+                <div
+                    class="requirement"
+                    id="lengthRequirement"
+                >
+                    <span>○</span>
+
+                    Pelo menos 8 caracteres
+                </div>
+
+
+                <div
+                    class="requirement"
+                    id="uppercaseRequirement"
+                >
+                    <span>○</span>
+
+                    Pelo menos uma letra maiúscula
+                </div>
+
+
+                <div
+                    class="requirement"
+                    id="lowercaseRequirement"
+                >
+                    <span>○</span>
+
+                    Pelo menos uma letra minúscula
+                </div>
+
+
+                <div
+                    class="requirement"
+                    id="numberRequirement"
+                >
+                    <span>○</span>
+
+                    Pelo menos um número
+                </div>
+
+
+                <div
+                    class="requirement"
+                    id="symbolRequirement"
+                >
+                    <span>○</span>
+
+                    Pelo menos um caractere especial
+                </div>
+
+            </div>
+
+
+            <!-- RECOMENDAÇÃO -->
+
+            <div class="suggestion-card">
+
+                <h2>
+                    💡 Recomendação
+                </h2>
+
+                <p id="suggestion">
+                    Digite uma senha para iniciar a análise.
+                </p>
+
+            </div>
+
+
+            <!-- AVISO -->
+
+            <p class="privacy-message">
+                🔒 Sua senha é analisada localmente e não é armazenada.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

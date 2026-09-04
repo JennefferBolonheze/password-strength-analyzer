@@ -1,0 +1,443 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(205, 103, 136, 0.40),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(145, 75, 105, 0.15),
+            transparent 30%
+        ),
+        #171116;
+
+    color: #f8eef3;
+
+    padding: 60px 20px;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+/* =========================
+   CARD PRINCIPAL
+========================= */
+
+.password-card {
+    width: 100%;
+    max-width: 720px;
+
+    padding: 48px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(31, 22, 28, 0.95);
+
+    border:
+        1px solid
+        rgba(215, 126, 155, 0.25);
+
+    box-shadow:
+        0 30px 90px
+        rgba(0, 0, 0, 0.40);
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.project-icon {
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+
+.project-category {
+    color: #e999b1;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+
+.password-card h1 {
+    font-size: 40px;
+
+    margin-bottom: 15px;
+
+    line-height: 1.2;
+}
+
+
+.description {
+    color: #cbbbc2;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+.password-container {
+    position: relative;
+
+    margin-bottom: 30px;
+}
+
+
+.password-container input {
+    width: 100%;
+
+    padding:
+        17px 55px
+        17px 18px;
+
+    border-radius: 15px;
+
+    border:
+        1px solid
+        rgba(215, 126, 155, 0.35);
+
+    background: #171116;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+
+.password-container input::placeholder {
+    color: #776b71;
+}
+
+
+.password-container input:focus {
+    border-color: #e999b1;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(215, 126, 155, 0.08);
+}
+
+
+/* BOTÃO DO OLHO */
+
+.password-container button {
+    position: absolute;
+
+    right: 15px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 18px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   FORÇA
+========================= */
+
+.strength-section {
+    margin-bottom: 25px;
+}
+
+
+.strength-info {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 10px;
+
+    color: #cbbbc2;
+
+    font-size: 14px;
+}
+
+
+.strength-info strong {
+    color: #e999b1;
+}
+
+
+.strength-bar {
+    width: 100%;
+
+    height: 10px;
+
+    background:
+        rgba(255, 255, 255, 0.07);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+
+.strength-fill {
+    width: 0%;
+
+    height: 100%;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #c87593,
+            #efa0b4
+        );
+
+    transition: width 0.4s ease;
+}
+
+
+/* =========================
+   SCORE
+========================= */
+
+.score-card {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 20px;
+
+    margin-bottom: 32px;
+
+    border-radius: 17px;
+
+    background:
+        rgba(215, 126, 155, 0.06);
+
+    border:
+        1px solid
+        rgba(215, 126, 155, 0.15);
+}
+
+
+.score-label {
+    color: #e999b1;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+}
+
+
+.score-card p {
+    color: #aa9aa2;
+
+    font-size: 13px;
+
+    margin-top: 5px;
+}
+
+
+.score-card strong {
+    color: #e999b1;
+
+    font-size: 23px;
+}
+
+
+/* =========================
+   REQUISITOS
+========================= */
+
+.requirements {
+    margin-bottom: 30px;
+}
+
+
+.requirements h2 {
+    font-size: 18px;
+
+    margin-bottom: 20px;
+}
+
+
+.requirement {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 7px 0;
+
+    color: #9f9097;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.requirement span {
+    font-size: 18px;
+}
+
+
+/* QUANDO O REQUISITO FOR ATINGIDO */
+
+.requirement.valid {
+    color: #f0b4c5;
+}
+
+
+.requirement.valid span {
+    color: #e999b1;
+}
+
+
+/* =========================
+   RECOMENDAÇÃO
+========================= */
+
+.suggestion-card {
+    padding: 21px;
+
+    border-radius: 17px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(215, 126, 155, 0.10),
+            rgba(239, 160, 180, 0.035)
+        );
+
+    border:
+        1px solid
+        rgba(215, 126, 155, 0.18);
+}
+
+
+.suggestion-card h2 {
+    color: #e999b1;
+
+    font-size: 16px;
+
+    margin-bottom: 10px;
+}
+
+
+.suggestion-card p {
+    color: #cbbbc2;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   PRIVACIDADE
+========================= */
+
+.privacy-message {
+    margin-top: 25px;
+
+    text-align: center;
+
+    color: #776a71;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 30px 15px;
+    }
+
+
+    .password-card {
+        padding: 32px 22px;
+
+        border-radius: 24px;
+    }
+
+
+    .password-card h1 {
+        font-size: 30px;
+    }
+
+
+    .score-card {
+        align-items: flex-start;
+    }
+
+
+    .score-card strong {
+        font-size: 19px;
+    }
+
+}
